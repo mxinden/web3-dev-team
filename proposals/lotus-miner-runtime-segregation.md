@@ -2,7 +2,7 @@
 
 Authors: @raulk
 
-Initial PR: TBD <!-- Reference the PR first proposing this document. Oooh, self-reference! -->
+Initial PR: https://github.com/protocol/web3-dev-team/pull/98
 
 ## Purpose &amp; impact 
 
@@ -13,11 +13,14 @@ _Describe the desired state of the world after this project? Why does that matte
 ##### Brief description of goal
 
 This project aims to conduct a minimal segregation of the monolith lotus-miner
-process through clean boundaries in order to: (a) increase the robustness and
-resilience of the system, (2) reduce attack surface, (3) lessen the operational
-risk that miners bear, (4) enable new miner-side features to be built without
-bloating, and (5) enable horizontal scaling, clustering, failover, firewalling,
-and threat prevention.
+process through clean boundaries in order to:
+
+1. increase the robustness and resilience of the system as a whole.
+2. reduce/contain the possible attack surfaces via hard isolation.
+3. lessen the operational risk that miners bear.
+4. enable new miner-side features to be built without feature bloat.
+5. enable horizontal scaling, clustering, failover, firewalling, and
+   threat prevention mechanisms.
 
 The minimal segregation consists of keeping the sealing, proving and mining
 activity inside the `lotus-miner` binary, and spinning off the markets-related
